@@ -1,31 +1,14 @@
 # Enhance the Stock Market Prediction Using Twitter Sentiment analysis
 
 ## Project Description:
-### Problem formulation:
 
-### Our contribution
+### Problem Formulation:
+The stock market is a focus for investors to maximize their potential
+profits and consequently, the interest shown from the technical
+and financial sides in stock market prediction is always on the rise.
 
-## Project Structure:
-
-## Methodology
-### Dataset Collection
-#### Stock Data
-#### Twitter Data
-### Data Preprocessing
-### Sentiment Analysis
-### Time Series approaches
-#### CNN-LSTM Based approach
-#### ARIMA Based approach
-
-
-## Requirments
-## Usage:
-### Installation
-### Code Explanation
-#### Jupyter notebooks
-
-
-## References and Related Work
-- LSTM-CNN prediction implemented  paper:
-- [snscrape](https://github.com/JustAnotherArchivist/snscrape)
-- The sentiment analysis model ([twitter-slm-roberta-base-sentiment](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment))
+However, stock market prediction is a problem known for its challenging
+nature due to its dependency on diverse factors that affect 
+the market, these factors are unpredictable and cannot be taken into
+consideration such as political variables, and social media effects
+such as twitter on the stock market.
