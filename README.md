@@ -1,1 +1,2 @@
-# Stock-market-prediction-using-sentiment-analysis-of-twitter
+# Enhance the Stock Market Prediction Using Twitter Sentiment analysis
+
