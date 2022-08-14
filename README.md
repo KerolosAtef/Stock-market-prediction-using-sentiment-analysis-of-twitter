@@ -81,3 +81,9 @@ And to identify the integrated parameters, they use a statistical test called th
 > ![image](https://drive.google.com/uc?export=view&id=1t57Teb0kQK5lHSm_3ZXugbvjc4Ziw9Fq) <br>
 > Figure 2: the change due to the pooling layer
 
+
+### Why LSTM at time series?
+
+> LSTM (Long Short-Term Memory) networks have the ability to learn long-term dependencies, especially, in a sequence prediction problem as time series, LSTM has outstanding performance on a large variety of data.
+> ![image](https://drive.google.com/uc?export=view&id=1rX81D0b-WLr3MhiebNlPS9NIASQEHps1) <br>
+> **Important Note:** The Bidirectional LSTM can learn in both direction forward and backward sequences, also the Bidirectional has complete information about all the points in the data.
