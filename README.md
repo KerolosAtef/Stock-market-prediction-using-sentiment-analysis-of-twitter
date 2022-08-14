@@ -87,3 +87,24 @@ And to identify the integrated parameters, they use a statistical test called th
 > LSTM (Long Short-Term Memory) networks have the ability to learn long-term dependencies, especially, in a sequence prediction problem as time series, LSTM has outstanding performance on a large variety of data.
 > ![image](https://drive.google.com/uc?export=view&id=1rX81D0b-WLr3MhiebNlPS9NIASQEHps1) <br>
 > **Important Note:** The Bidirectional LSTM can learn in both direction forward and backward sequences, also the Bidirectional has complete information about all the points in the data.
+
+
+## Methodology
+### The Project Structure
+![image](https://drive.google.com/uc?export=view&id=1dAWrpyQ9wc8ehxKFVR8NB2q45Zh468g0)
+As Shown at the above figure, our project has nine stages:
+- Stock Data Scraping
+- Twitter Data Scraping
+- Twitter Data Preprocessing and Sentiment analysis
+- Modeling Using Two approaches
+  - ARIMA as Baseline
+  - Deep learning architecture using 1D-CNN and BiCudaLSTM layers as our new approach
+- Compare and evaluate our approach vs ARIMA
+- Evaluate our approach against new data in real-time
+
+### Dataset Collection
+- The Stock Data: The research team downloaded the stock data of Netflix in Spreadsheet from Yahoo Finance website from Jan 1st, 2018 to July 7th, 2022 
+![image](https://drive.google.com/uc?export=view&id=1LNpK07hJg-gZNZVBaRy5In4BT8YNA4KR)
+
+- The Twitter Data: The research team scrapped within the same period using the Snscrape tool. 
+<br>**Note:** Twitter API could not be used in this project as it was limited to only one week
