@@ -154,7 +154,7 @@ The shape of features without the Twitter sentiment analysis is (1118,5,6). The 
 > #### CNN-LSTM Based approach
 > Our CNN-LSTM model Architecture with time series problems which consist of a CNN block followed by an LSTM block and finally fully connected layers as shown in the figure below.
 > <br><center>![image](https://drive.google.com/uc?export=view&id=1QiRy6FOmxVKanYk33-UCZSgaiAxXGLV-)</center>
-> This combination of using CNN and LSTM increased the accuracy instead of using only LSTM or CNN.
+> <br> This combination of using CNN and LSTM increased the accuracy instead of using only LSTM or CNN.
 The use of the CNN at first makes the model able to extract the features of the data and then the LSTM block saves the sequence of the data. 
 The use of CUDNN-LSTM layers instead of the original LSTM layers makes the training very fast as the time is reduced to approximately 3x.
 
