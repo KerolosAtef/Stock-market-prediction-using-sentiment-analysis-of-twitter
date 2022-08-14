@@ -3,7 +3,7 @@
 ## Contents:
 * [Problem Formulation](#Problem-Formulation)
 * [Background](#Background)
-  * [What's ARIMA(Autoregressive integrated moving average) ?](#What's-ARIMA(Autoregressive-integrated-moving-average)-?)
+  * [What's ARIMA(Autoregressive integrated moving average)?](#What's-ARIMA(Autoregressive-integrated-moving-average)?)
   * [Why CNN at time series?](#Why-CNN-at-time-series?)
   * [Why LSTM at time series?](#Why-LSTM-at-time-series?)
 * [Methodology](#Methodology)
@@ -39,7 +39,7 @@ consideration such as political variables, and social media effects
 such as twitter on the stock market.
 
 ## Background:
-### What's ARIMA(Autoregressive integrated moving average) ?
+### What's ARIMA(Autoregressive integrated moving average)?
 > - ARIMA is a statistical analysis model that predicts the future of a variable with respect to time or for a better understanding of the time series dataset.
 > - ARIMA is a generalization of Auto-Regressive, Moving Average, and integration terms.
 > Those terms would be explained briefly in the following section.
