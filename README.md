@@ -1,5 +1,6 @@
 # Enhance the Stock Market Prediction Using Twitter Sentiment analysis
 
+![image](https://drive.google.com/uc?export=view&id=1hPsfWegCG_W3i7TLZdarArxuD9dVNd0w)
 ## Contents:
 * [Problem Formulation](#Problem-Formulation)
 * [Background](#Background)
@@ -69,17 +70,17 @@ And to identify the integrated parameters, they use a statistical test called th
 
 ### Why CNN at time series?
 > **Convolutional Neural Networks (CNN):** <br> 
-> The 1-d convolutional neural networks are used intensively in time series forecasting for a fixed window length, CNN has the ability to remove the noise and unrelated patterns along the time series data. Also, the convolutional and pooling layers both perform smoothing to the data instead of the traditional weighted average with require manual tuning.
-> <br><center>![image](https://drive.google.com/uc?export=view&id=1uX57pjUzbgduD-9nRgpuquUh7uOKGTXC)</center>
-> <br>Convolution learn from data through its filter’s weights update. CNN layers depend on the learning of the filters, so these filters after training will be able to detect the features.
-> <br><center>![image](https://drive.google.com/uc?export=view&id=1gDeLNYGX22hryuIUNbidhl5dadUUXXD0)</center>
-> <br>The pooling layer mainly smooths out and reduces the local noise by averaging the time series values.
-> <br><center>![image](https://drive.google.com/uc?export=view&id=1SID4bHM2Xuu2q4KPqNxYbRBnnYPjKQI9)</center>
-> The data change after each layer:
-> <br><center>![image](https://drive.google.com/uc?export=view&id=1ySLDnYLasBa_rPSALGjutuRkmU6A2ZJl)</center>
-> <br><center>Figure 1: the change due to the CNN layer</center>
-> <br><center>![image](https://drive.google.com/uc?export=view&id=1t57Teb0kQK5lHSm_3ZXugbvjc4Ziw9Fq)</center>
-> <br><center>Figure 2: the change due to the pooling layer</center>
+> The 1-d convolutional neural networks are used intensively in time series forecasting for a fixed window length, CNN has the ability to remove the noise and unrelated patterns along the time series data. Also, the convolutional and pooling layers both perform smoothing to the data instead of the traditional weighted average with require manual tuning.<br>
+> ![image](https://drive.google.com/uc?export=view&id=1uX57pjUzbgduD-9nRgpuquUh7uOKGTXC)<br>
+> Convolution learn from data through its filter’s weights update. CNN layers depend on the learning of the filters, so these filters after training will be able to detect the features.<br>
+> ![image](https://drive.google.com/uc?export=view&id=1gDeLNYGX22hryuIUNbidhl5dadUUXXD0)<br>
+> The pooling layer mainly smooths out and reduces the local noise by averaging the time series values.<br>
+> ![image](https://drive.google.com/uc?export=view&id=1SID4bHM2Xuu2q4KPqNxYbRBnnYPjKQI9)<br>
+> The data change after each layer:<br>
+> ![image](https://drive.google.com/uc?export=view&id=1ySLDnYLasBa_rPSALGjutuRkmU6A2ZJl)<br>
+> Figure 1: the change due to the CNN layer<br>
+> ![image](https://drive.google.com/uc?export=view&id=1t57Teb0kQK5lHSm_3ZXugbvjc4Ziw9Fq)<br>
+> Figure 2: the change due to the pooling layer<br>
 
 
 ### Why LSTM at time series?
