@@ -166,3 +166,47 @@ The use of CUDNN-LSTM layers instead of the original LSTM layers makes the train
 > - The tweets have a positive impact as the accuracy increased.
 > - Our model has a fast-learning curve, which achieved the Arima's accuracy in a few epochs, and without much optimization effort
 > - expected to have a better performance if the model trained, again with more data and with more tuning to the parameter. taking into consideration that LSTM and CNN when getting more data would learn significantly.
+
+## Usage
+### Scraping tweets 
+Run the following command:
+```commandline
+$ pip3 install git+https://github.com/JustAnotherArchivist/snscrape.git
+```
+Then using the following python lines:
+```python
+import os
+text_query = "$NFLX" # specify the company you need $NFLX = Netflix company
+since_date = "2018-01-01" # specify the start date
+until_date = "2022-07-11" # specify the end date
+os.system('snscrape --jsonl --since {} twitter-search "{} until:{}"> text-query-tweets.json'.format(since_date, text_query, until_date))
+```
+### Applying the Sentiment analysis on the tweets
+Run the following command:
+```commandline
+$ pip install transformers
+$ pip install transformers[sentencepiece]
+```
+```Python
+from transformers import TFAutoModelForSequenceClassification
+from transformers import AutoTokenizer, AutoConfig
+
+MODEL = f"cardiffnlp/twitter-xlm-roberta-base-sentiment"
+
+tokenizer = AutoTokenizer.from_pretrained(MODEL)
+config = AutoConfig.from_pretrained(MODEL)
+
+# After loading the models you can use them
+model = TFAutoModelForSequenceClassification.from_pretrained(MODEL)
+model.save_pretrained(MODEL)
+tokenizer.save_pretrained(MODEL)
+
+encoded_input = tokenizer(input_text, return_tensors='tf')
+final_output = model(encoded_input)
+```
+
+## References and Related Work
+- LSTM-CNN prediction implemented  paper: 
+- The sentiment analysis model ([twitter-slm-roberta-base-sentiment](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment))
+
+ 
