@@ -142,3 +142,10 @@ a pre-trained model called “[twitter-slm-roberta-base-sentiment](https://huggi
 > In the time series problems with deep learning, the dataset should be reshaped to features and the target. The features consist of the number of previous days we look at and the target consists of the predicted future days and the number of predicted features. The dataset for this project is 1128 samples and the look-back days are 5 days, and the number of features is 7, so the features will be reshaped to (1118,5,7) and if the number of future days is 1 and the predicted features are 2 so the shape will be (1118,1,2).
 The shape of features without the Twitter sentiment analysis is (1118,5,6). The last 5 days were dropped because they don’t have target value.
 > ![image](https://drive.google.com/uc?export=view&id=1yiclleivNPEf6gsAFkm7c4fwkTRZieJO)
+
+
+### Modeling
+> #### ARIMA (Autoregressive integrated moving average) approach
+> Due to the headache of identifying the model and its parameters, the python community has developed an automated library called “Auto Arima” that chooses the best model suitable for your dataset and identifies the best parameters to achieve the lowest loss.
+> **_Our arima model is architecture:_**
+> ![image](https://drive.google.com/uc?export=view&id=1QU54Jjt2zsH2uPCynlMm_Qcr50BFQLgN)
