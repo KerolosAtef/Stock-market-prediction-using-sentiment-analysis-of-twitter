@@ -157,3 +157,12 @@ The shape of features without the Twitter sentiment analysis is (1118,5,6). The 
 > This combination of using CNN and LSTM increased the accuracy instead of using only LSTM or CNN.
 The use of the CNN at first makes the model able to extract the features of the data and then the LSTM block saves the sequence of the data. 
 The use of CUDNN-LSTM layers instead of the original LSTM layers makes the training very fast as the time is reduced to approximately 3x.
+
+
+### Results
+
+### Conclusion
+> While we compared the results of the two models we found:
+> - The tweets have a positive impact as the accuracy increased.
+> - Our model has a fast-learning curve, which achieved the Arima's accuracy in a few epochs, and without much optimization effort
+> - expected to have a better performance if the model trained, again with more data and with more tuning to the parameter. taking into consideration that LSTM and CNN when getting more data would learn significantly.
