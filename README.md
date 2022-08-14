@@ -65,3 +65,19 @@ such as twitter on the stock market.
 > To identify the values of AR and MA parameters we use ACF and PACF plots. Or by using grid search to go over all the combinations of parameters and chose the one that achieves the least loss according to a defined loss function such as Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC) as both are penalized-likelihood information criteria.
 And to identify the integrated parameters, they use a statistical test called the “Augmented Dickey-Fuller test”
 > - Note: Due to the headache of identifying the model and its parameters, the python community has developed an automated library called “Auto Arima” that chooses the best model suitable for your dataset and identifies the best parameters to achieve the lowest loss.
+
+
+### Why CNN at time series?
+> **Convolutional Neural Networks (CNN):** <br> 
+> The 1-d convolutional neural networks are used intensively in time series forecasting for a fixed window length, CNN has the ability to remove the noise and unrelated patterns along the time series data. Also, the convolutional and pooling layers both perform smoothing to the data instead of the traditional weighted average with require manual tuning.
+> ![image](https://drive.google.com/uc?export=view&id=1uX57pjUzbgduD-9nRgpuquUh7uOKGTXC) <br>
+> Convolution learn from data through its filter’s weights update. CNN layers depend on the learning of the filters, so these filters after training will be able to detect the features.
+> ![image](https://drive.google.com/uc?export=view&id=1gDeLNYGX22hryuIUNbidhl5dadUUXXD0) <br>
+> The pooling layer mainly smooths out and reduces the local noise by averaging the time series values.
+> ![image](https://drive.google.com/uc?export=view&id=1SID4bHM2Xuu2q4KPqNxYbRBnnYPjKQI9) <br>
+> The data change after each layer:
+> ![image](https://drive.google.com/uc?export=view&id=1ySLDnYLasBa_rPSALGjutuRkmU6A2ZJl) <br>
+> Figure 1: the change due to the CNN layer
+> ![image](https://drive.google.com/uc?export=view&id=1t57Teb0kQK5lHSm_3ZXugbvjc4Ziw9Fq) <br>
+> Figure 2: the change due to the pooling layer
+
