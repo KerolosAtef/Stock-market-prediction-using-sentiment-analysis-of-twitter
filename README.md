@@ -127,3 +127,13 @@ a pre-trained model called “[twitter-slm-roberta-base-sentiment](https://huggi
 ![image](https://drive.google.com/uc?export=view&id=1TVGXfz-5p_eaXgvlWIjAxfTcR4egk91-)
 <br>
 > Due to each day having 350 tweets on average, it was aggregated by the average of polarities to get only a single number per day.
+
+
+### Data preparation
+> the polarities were combined with the stock data to form one dataset to be used in time series models.
+> ![image](https://drive.google.com/uc?export=view&id=1O_p9SDTMovaNTBacNswPZkc3KRiVTiIQ)
+
+#### **_ARIMA Preparation:_**
+> The input of the library should be in the form of y (predicted output) and X (features) as shown:
+> ![image](https://drive.google.com/uc?export=view&id=1IjIGVK-Ry9TyZr-ReXhWHtm6wUr7AaPJ)
+> Open, High, Low, Close, Adj Close, Volume, P_mean, P_sum, twt_count should be mapped to the Open and Close of the next data to be considered as the prediction.
