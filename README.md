@@ -18,11 +18,11 @@
   * [Modeling](#Modeling)
     * [CNN-LSTM Based approach](#CNN-LSTM-Based-approach)
     * [ARIMA (Autoregressive integrated moving average) approach](#ARIMA-(Autoregressive-integrated-moving-average)-approach)
-* [Results](#Install)
-* [Conclusion](#Install)
+* [Results](#Results)
+* [Conclusion](#Conclusion)
 
 * [Usage](#Usage)
-  * [Scraping tweets ](#Scraping-tweets )
+  * [Scraping tweets ](#Scraping-tweets)
   * [Applying the Sentiment analysis on the tweets](#Applying-the-Sentiment-analysis-on-the-tweets)
 * [References and Related Work](#References-and-Related-Work)
 * [Team Members](#Team-Members)
@@ -71,9 +71,9 @@ And to identify the integrated parameters, they use a statistical test called th
 > **Convolutional Neural Networks (CNN):** <br> 
 > The 1-d convolutional neural networks are used intensively in time series forecasting for a fixed window length, CNN has the ability to remove the noise and unrelated patterns along the time series data. Also, the convolutional and pooling layers both perform smoothing to the data instead of the traditional weighted average with require manual tuning.
 > <br><center>![image](https://drive.google.com/uc?export=view&id=1uX57pjUzbgduD-9nRgpuquUh7uOKGTXC)</center>
-> Convolution learn from data through its filter’s weights update. CNN layers depend on the learning of the filters, so these filters after training will be able to detect the features.
+> <br>Convolution learn from data through its filter’s weights update. CNN layers depend on the learning of the filters, so these filters after training will be able to detect the features.
 > <br><center>![image](https://drive.google.com/uc?export=view&id=1gDeLNYGX22hryuIUNbidhl5dadUUXXD0)</center>
-> The pooling layer mainly smooths out and reduces the local noise by averaging the time series values.
+> <br>The pooling layer mainly smooths out and reduces the local noise by averaging the time series values.
 > <br><center>![image](https://drive.google.com/uc?export=view&id=1SID4bHM2Xuu2q4KPqNxYbRBnnYPjKQI9)</center>
 > The data change after each layer:
 > <br><center>![image](https://drive.google.com/uc?export=view&id=1ySLDnYLasBa_rPSALGjutuRkmU6A2ZJl)</center>
