@@ -70,28 +70,28 @@ And to identify the integrated parameters, they use a statistical test called th
 ### Why CNN at time series?
 > **Convolutional Neural Networks (CNN):** <br> 
 > The 1-d convolutional neural networks are used intensively in time series forecasting for a fixed window length, CNN has the ability to remove the noise and unrelated patterns along the time series data. Also, the convolutional and pooling layers both perform smoothing to the data instead of the traditional weighted average with require manual tuning.
-> ![image](https://drive.google.com/uc?export=view&id=1uX57pjUzbgduD-9nRgpuquUh7uOKGTXC) <br>
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1uX57pjUzbgduD-9nRgpuquUh7uOKGTXC)</center>
 > Convolution learn from data through its filter’s weights update. CNN layers depend on the learning of the filters, so these filters after training will be able to detect the features.
-> ![image](https://drive.google.com/uc?export=view&id=1gDeLNYGX22hryuIUNbidhl5dadUUXXD0) <br>
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1gDeLNYGX22hryuIUNbidhl5dadUUXXD0)</center>
 > The pooling layer mainly smooths out and reduces the local noise by averaging the time series values.
-> ![image](https://drive.google.com/uc?export=view&id=1SID4bHM2Xuu2q4KPqNxYbRBnnYPjKQI9) <br>
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1SID4bHM2Xuu2q4KPqNxYbRBnnYPjKQI9)</center>
 > The data change after each layer:
-> ![image](https://drive.google.com/uc?export=view&id=1ySLDnYLasBa_rPSALGjutuRkmU6A2ZJl) <br>
-> Figure 1: the change due to the CNN layer
-> ![image](https://drive.google.com/uc?export=view&id=1t57Teb0kQK5lHSm_3ZXugbvjc4Ziw9Fq) <br>
-> Figure 2: the change due to the pooling layer
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1ySLDnYLasBa_rPSALGjutuRkmU6A2ZJl)</center>
+> <br><center>Figure 1: the change due to the CNN layer</center>
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1t57Teb0kQK5lHSm_3ZXugbvjc4Ziw9Fq)</center>
+> <br><center>Figure 2: the change due to the pooling layer</center>
 
 
 ### Why LSTM at time series?
 
 > LSTM (Long Short-Term Memory) networks have the ability to learn long-term dependencies, especially, in a sequence prediction problem as time series, LSTM has outstanding performance on a large variety of data.
-> ![image](https://drive.google.com/uc?export=view&id=1rX81D0b-WLr3MhiebNlPS9NIASQEHps1) <br>
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1rX81D0b-WLr3MhiebNlPS9NIASQEHps1)</center>
 > **Important Note:** The Bidirectional LSTM can learn in both direction forward and backward sequences, also the Bidirectional has complete information about all the points in the data.
 
 
 ## Methodology
 ### The Project Structure
-![image](https://drive.google.com/uc?export=view&id=1dAWrpyQ9wc8ehxKFVR8NB2q45Zh468g0)
+<br><center> ![image](https://drive.google.com/uc?export=view&id=1dAWrpyQ9wc8ehxKFVR8NB2q45Zh468g0)</center>
 As Shown at the above figure, our project has nine stages:
 - Stock Data Scraping
 - Twitter Data Scraping
@@ -104,7 +104,7 @@ As Shown at the above figure, our project has nine stages:
 
 ### Dataset Collection
 - The Stock Data: The research team downloaded the stock data of Netflix in Spreadsheet from Yahoo Finance website from Jan 1st, 2018 to July 7th, 2022 
-![image](https://drive.google.com/uc?export=view&id=1LNpK07hJg-gZNZVBaRy5In4BT8YNA4KR)
+<br><center> ![image](https://drive.google.com/uc?export=view&id=1LNpK07hJg-gZNZVBaRy5In4BT8YNA4KR)</center>
 
 - The Twitter Data: The research team scrapped within the same period using the Snscrape tool. 
 <br>**Note:** Twitter API could not be used in this project as it was limited to only one week
@@ -118,42 +118,42 @@ As Shown at the above figure, our project has nine stages:
 > - Tokenize sentences by Twitter.
 > - Removing stop Words and punctuations
 > - Applying lemmatization on each word.
-> ![image](https://drive.google.com/uc?export=view&id=1oRFq7xf_EzRMyvRxHD_GsRnyk7vKTL0Z)
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1oRFq7xf_EzRMyvRxHD_GsRnyk7vKTL0Z)</center>
 
 ### Sentiment Analysis
 > As the volume of tweets was huge, it was a challenge to label them manually, so the research team used 
 a pre-trained model called “[twitter-slm-roberta-base-sentiment](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment)” which was trained on 198 million tweets to get the polarity of each tweet.
 <br>The polarity score was converted into three values;1, 0, and -1 for each class as 1 represents a positive tweet, 0 represents a neutral tweet, and -1 represents a negative tweet.
-![image](https://drive.google.com/uc?export=view&id=1TVGXfz-5p_eaXgvlWIjAxfTcR4egk91-)
+<br><center> ![image](https://drive.google.com/uc?export=view&id=1TVGXfz-5p_eaXgvlWIjAxfTcR4egk91-)</center>
 <br>
 > Due to each day having 350 tweets on average, it was aggregated by the average of polarities to get only a single number per day.
 
 
 ### Data preparation
 > the polarities were combined with the stock data to form one dataset to be used in time series models.
-> ![image](https://drive.google.com/uc?export=view&id=1O_p9SDTMovaNTBacNswPZkc3KRiVTiIQ)
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1O_p9SDTMovaNTBacNswPZkc3KRiVTiIQ)</center>
 
 #### **_ARIMA Preparation:_**
 > The input of the library should be in the form of y (predicted output) and X (features) as shown:
-> ![image](https://drive.google.com/uc?export=view&id=1IjIGVK-Ry9TyZr-ReXhWHtm6wUr7AaPJ)
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1IjIGVK-Ry9TyZr-ReXhWHtm6wUr7AaPJ)</center>
 > Open, High, Low, Close, Adj Close, Volume, P_mean, P_sum, twt_count should be mapped to the Open and Close of the next data to be considered as the prediction.
 
 #### **_CNN-LSTM Preparation:_**
 > In the time series problems with deep learning, the dataset should be reshaped to features and the target. The features consist of the number of previous days we look at and the target consists of the predicted future days and the number of predicted features. The dataset for this project is 1128 samples and the look-back days are 5 days, and the number of features is 7, so the features will be reshaped to (1118,5,7) and if the number of future days is 1 and the predicted features are 2 so the shape will be (1118,1,2).
 The shape of features without the Twitter sentiment analysis is (1118,5,6). The last 5 days were dropped because they don’t have target value.
-> ![image](https://drive.google.com/uc?export=view&id=1yiclleivNPEf6gsAFkm7c4fwkTRZieJO)
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1yiclleivNPEf6gsAFkm7c4fwkTRZieJO)</center>
 
 
 ### Modeling
 > #### ARIMA (Autoregressive integrated moving average) approach
 > Due to the headache of identifying the model and its parameters, the python community has developed an automated library called “Auto Arima” that chooses the best model suitable for your dataset and identifies the best parameters to achieve the lowest loss.
 > **_Our arima model is architecture:_**
-> ![image](https://drive.google.com/uc?export=view&id=1QU54Jjt2zsH2uPCynlMm_Qcr50BFQLgN)
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1QU54Jjt2zsH2uPCynlMm_Qcr50BFQLgN)</center>
 
 
 > #### CNN-LSTM Based approach
 > Our CNN-LSTM model Architecture with time series problems which consist of a CNN block followed by an LSTM block and finally fully connected layers as shown in the figure below.
-> ![image](https://drive.google.com/uc?export=view&id=1QiRy6FOmxVKanYk33-UCZSgaiAxXGLV-)
+> <br><center>![image](https://drive.google.com/uc?export=view&id=1QiRy6FOmxVKanYk33-UCZSgaiAxXGLV-)</center>
 > This combination of using CNN and LSTM increased the accuracy instead of using only LSTM or CNN.
 The use of the CNN at first makes the model able to extract the features of the data and then the LSTM block saves the sequence of the data. 
 The use of CUDNN-LSTM layers instead of the original LSTM layers makes the training very fast as the time is reduced to approximately 3x.
