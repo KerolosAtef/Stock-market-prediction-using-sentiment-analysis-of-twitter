@@ -108,3 +108,22 @@ As Shown at the above figure, our project has nine stages:
 
 - The Twitter Data: The research team scrapped within the same period using the Snscrape tool. 
 <br>**Note:** Twitter API could not be used in this project as it was limited to only one week
+
+
+### Data Preprocessing
+> After scrapping the tweets, it was uncleaned text. So, we go through a cleaning process as shown:
+> - Lowering the sentences.
+> - Removing the attached links, hashtags, symbols, and numerical values.
+> - Translate emojis into their meanings.
+> - Tokenize sentences by Twitter.
+> - Removing stop Words and punctuations
+> - Applying lemmatization on each word.
+> ![image](https://drive.google.com/uc?export=view&id=1oRFq7xf_EzRMyvRxHD_GsRnyk7vKTL0Z)
+
+### Sentiment Analysis
+> As the volume of tweets was huge, it was a challenge to label them manually, so the research team used 
+a pre-trained model called “[twitter-slm-roberta-base-sentiment](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment)” which was trained on 198 million tweets to get the polarity of each tweet.
+<br>The polarity score was converted into three values;1, 0, and -1 for each class as 1 represents a positive tweet, 0 represents a neutral tweet, and -1 represents a negative tweet.
+![image](https://drive.google.com/uc?export=view&id=1TVGXfz-5p_eaXgvlWIjAxfTcR4egk91-)
+<br>
+> Due to each day having 350 tweets on average, it was aggregated by the average of polarities to get only a single number per day.
