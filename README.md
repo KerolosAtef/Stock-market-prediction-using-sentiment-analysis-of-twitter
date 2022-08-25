@@ -30,7 +30,7 @@
 
 ## Problem Formulation:
 The stock market is a focus for investors to maximize their potential
-profits and consequently, the interest shown from the technical
+profits and consequently, the interest is shown from the technical
 and financial sides in stock market prediction is always on the rise.
 
 However, stock market prediction is a problem known for its challenging
