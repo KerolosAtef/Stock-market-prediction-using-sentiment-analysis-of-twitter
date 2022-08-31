@@ -1,4 +1,4 @@
-# Enhance the Stock Market Prediction Using Twitter Sentiment analysis
+# Enhance the Stock Market Prediction Using Twitter sentiment analysis
 
 ![image](https://drive.google.com/uc?export=view&id=1hPsfWegCG_W3i7TLZdarArxuD9dVNd0w)
 ## Contents:
